@@ -33,19 +33,19 @@ function fooGallery(galeryItems) {
 }
 
 
-                  //Implementation of delegation at ul.gallery and open modal window
+                  //delegation ul.gallery and open modal window
 
 function onClick(evt) {
-if (evt.target === evt.currentTarget) return;
+if (evt.target.classList.contains('gallery__item')) return;
 
   
-evt.preventDefault();
-  const originalImg = evt.target.dataset.source;
-  
-   
-   const instance = basicLightbox.create(`<img src="${originalImg}">`);
-   instance.show();
-}
+ evt.preventDefault();
+   const originalImg = evt.target.dataset.source;
+
+ 
+    const instance = basicLightbox.create(`<img src="${originalImg}">`);
+    instance.show();
+ }
 
 
 
