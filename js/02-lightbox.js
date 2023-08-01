@@ -28,8 +28,7 @@ const galleryElem = document.querySelector('.gallery__image');
     galleryElement.insertAdjacentHTML('beforeend', fooGallery(galleryItems).join(''));
 
 
-                  //Implementation of delegation at ul.gallery and open modal window
-
+            //library lightbox
    
   const lightbox = new SimpleLightbox(".gallery a", {
     captions: true,

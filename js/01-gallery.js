@@ -9,6 +9,10 @@ console.log(galleryItems);
                     
   const galleryElement = document.querySelector('.gallery');
 
+  
+galleryElement.insertAdjacentHTML('beforeend', fooGallery(galleryItems).join(''));
+galleryElement.addEventListener('click', onClick);
+
  
 function fooGallery(galeryItems) {
   return galleryItems
@@ -27,8 +31,6 @@ function fooGallery(galeryItems) {
       `;
     });
 }
-galleryElement.insertAdjacentHTML('beforeend', fooGallery(galleryItems).join(''));
-galleryElement.addEventListener('click', onClick);
 
 
                   //Implementation of delegation at ul.gallery and open modal window
