@@ -36,7 +36,7 @@ function fooGallery(galeryItems) {
                   //delegation ul.gallery and open modal window
 
 function onClick(evt) {
-if (evt.target.classList.contains('gallery__item')) return;
+if (evt.target.classList.contains('gallery__ite')) return;
 
   
  evt.preventDefault();
