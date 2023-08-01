@@ -36,9 +36,9 @@ function fooGallery(galeryItems) {
                   //Implementation of delegation at ul.gallery and open modal window
 
 function onClick(evt) {
-if (evt.target.nodeName !== "IMG") {
-return;
-  }
+if (evt.target === evt.currentTarget) return;
+
+  
 evt.preventDefault();
   const originalImg = evt.target.dataset.source;
   
