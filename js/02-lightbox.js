@@ -6,6 +6,9 @@ console.log(galleryItems);
 
 const galleryElement = document.querySelector('.gallery');
 const galleryElem = document.querySelector('.gallery__image');
+
+galleryElement.insertAdjacentHTML('beforeend', fooGallery(galleryItems).join(''));
+
     // displaying elements in the browser
         
 
@@ -25,7 +28,6 @@ const galleryElem = document.querySelector('.gallery__image');
           `;
         });
     }
-    galleryElement.insertAdjacentHTML('beforeend', fooGallery(galleryItems).join(''));
 
 
             //library lightbox
