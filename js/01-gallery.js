@@ -48,9 +48,8 @@ if (evt.target === evt.currentTarget) return;
 
 
 galleryElement.addEventListener('keydown', onClose);
-
 function onClose(evt) {
-  if (evt.code === "Escape") {
+  if (evt.code === "KeyW") {
 instance.close();
   }
 }
