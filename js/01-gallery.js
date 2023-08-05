@@ -37,15 +37,21 @@ function fooGallery(galeryItems) {
 
 function onClick(evt) {
 if (evt.target === evt.currentTarget) return;
-
-  
  evt.preventDefault();
+
+
    const originalImg = evt.target.dataset.source;
 
  
     const instance = basicLightbox.create(`<img src="${originalImg}">`);
     instance.show();
- }
 
 
+galleryElement.addEventListener('keydown', onClose);
 
+function onClose(evt) {
+  if (evt.code === "Escape") {
+instance.close();
+  }
+}
+ };
