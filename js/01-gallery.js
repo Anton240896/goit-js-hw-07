@@ -18,8 +18,8 @@ function fooGallery(galeryItems) {
           <a class="gallery__link" href="${original}">
             <img
               class="gallery__image"
-              src="${preview}"
               data-source="${original}"
+              src="${preview}"
               alt="${description}"
             />
           </a>
@@ -35,7 +35,7 @@ galleryElement.addEventListener('click', onClick);
                   //delegation ul.gallery and open modal window
 
 function onClick(evt) {
-if (evt.target === evt.currentTarget) 
+if (evt.target === evt.currentTarget)
 return;
  evt.preventDefault();
 
@@ -49,8 +49,8 @@ return;
 
 galleryElement.addEventListener('keydown', onClose);
 function onClose(evt) {
-  const clickW = "KeyW" 
-  if (evt.code === clickW) {
+  const Escape = "Escape" 
+  if (evt.code === Escape) {
 instance.close();
   }
 }
