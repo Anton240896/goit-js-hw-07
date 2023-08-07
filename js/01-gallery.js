@@ -9,10 +9,6 @@ console.log(galleryItems);
                     
   const galleryElement = document.querySelector('.gallery');
 
-  
-galleryElement.insertAdjacentHTML('beforeend', fooGallery(galleryItems).join(''));
-galleryElement.addEventListener('click', onClick);
-
  
 function fooGallery(galeryItems) {
   return galleryItems
@@ -32,11 +28,15 @@ function fooGallery(galeryItems) {
     });
 }
 
+galleryElement.insertAdjacentHTML('beforeend', fooGallery(galleryItems).join(''));
+galleryElement.addEventListener('click', onClick);
+
 
                   //delegation ul.gallery and open modal window
 
 function onClick(evt) {
-if (evt.target === evt.currentTarget) return;
+if (evt.target === evt.currentTarget) 
+return;
  evt.preventDefault();
 
 
