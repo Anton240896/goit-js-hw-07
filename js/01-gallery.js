@@ -9,26 +9,24 @@ console.log(galleryItems);
                     
   const galleryElement = document.querySelector('.gallery');
 
- 
-function fooGallery(galeryItems) {
-  return galleryItems
-    .map(({ preview, original, description }) => {
-      return `
-        <li class="gallery__item">
-          <a class="gallery__link" href="${original}">
-            <img
-              class="gallery__image"
-              data-source="${original}"
-              src="${preview}"
-              alt="${description}"
-            />
-          </a>
-        </li>
-      `;
-    });
-}
+  galleryElement.insertAdjacentHTML('beforeend', galleryFunc(galleryItems).join(''));
 
-galleryElement.insertAdjacentHTML('beforeend', fooGallery(galleryItems).join(''));
+ 
+  function galleryFunc(arr) {
+    return arr.map(({ preview, original, description }) => `
+      <li class="gallery__item">
+      <a class="gallery__link" href="${original}">
+        <img
+          class="gallery__image"
+          src="${preview}"
+          data-source = "${original}"
+          alt="${description}"
+        />
+      </a>
+    </li>  `);
+  };
+
+
 galleryElement.addEventListener('click', onClick);
 
 
